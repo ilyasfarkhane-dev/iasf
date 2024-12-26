@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import StatusBadge from './StatusBadge';
-import RoomOverview from './RoomOverview'; // Import the modal component
+import RoomOverview from './RoomOverview';
+
+type StatusType = 'Disponible' | 'Maintenance' | 'reservé';
 
 type ProductCardProps = {
   product: {
     id: number;
     name: string;
-    status: string;
+    status: StatusType;
     href: string;
     imageSrc: StaticImageData;
     imageAlt: string;
@@ -55,8 +57,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </button>
       </div>
 
-
-      {/* Modal */}
       {isModalOpen && <RoomOverview product={product} onClose={closeModal} />}
     </div>
   );
