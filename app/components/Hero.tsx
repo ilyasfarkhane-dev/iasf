@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 
-import Lottie from 'lottie-react'
 import AnimationData from "@/public/Abimation-Data.json"
 
 const navigation = [
@@ -67,7 +66,7 @@ export default function Example() {
             </div>
           </div>
           <div className=" mx-auto w-[35.875rem] max-w-full drop-shadow-xl">
-           <Lottie animationData={AnimationData} />
+          
           </div>
         </div>
       </div>
