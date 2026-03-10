@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ChevronRightIcon } from '@heroicons/react/20/solid'
+import { ChevronRightIcon } from '@heroicons/react/solid'
 import Hero from '@/app/components/Hero'
 import FQ from '@/app/components/F&Q'
 import { Metadata } from "next";
