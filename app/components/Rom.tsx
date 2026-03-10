@@ -5,18 +5,20 @@ import RoomOverview from './RoomOverview';
 
 type StatusType = 'Disponible' | 'Maintenance' | 'reservé';
 
+export type Product = {
+  id: number;
+  name: string;
+  status: StatusType;
+  href: string;
+  imageSrc: StaticImageData;
+  imageAlt: string;
+  price: string;
+  description: string;
+  category: string;
+};
+
 type ProductCardProps = {
-  product: {
-    id: number;
-    name: string;
-    status: StatusType;
-    href: string;
-    imageSrc: StaticImageData;
-    imageAlt: string;
-    price: string;
-    description: string;
-    category: string;
-  };
+  product: Product;
 };
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
